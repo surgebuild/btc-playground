@@ -103,8 +103,7 @@ $$
 
 **Required Fee Rate:**
 
-$$requiredFeeRate = 3 * 10
-* 1.1 = 33(satoshis-per-byte)$$
+$$requiredFeeRate = 3 * 10 * 1.1 = 33(satoshis-per-byte)$$
 
 **Total Fee:**
 
