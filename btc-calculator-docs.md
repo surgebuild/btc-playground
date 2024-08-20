@@ -35,7 +35,7 @@ $$maxRollupSpace = maxSize (KB) * 1024$$
 
 The competition factor adjusts the base fee rate based on the ratio of total demand to maximum rollup space. If the total demand exceeds the available space, the competition factor increases.
 
-# $competitionFactor = max(1, totalDemand / maxRollupSpace)$
+$competitionFactor = max(1, totalDemand / maxRollupSpace)$
 
 ### 4. Required Fee Rate
 
