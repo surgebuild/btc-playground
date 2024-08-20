@@ -40,7 +40,7 @@ $competitionFactor = max(1, totalDemand / maxRollupSpace)$
 
 This is the fee rate needed per byte to ensure the inclusion of the rollup batches.
 
-![output.png](Bitcoin%20Fee%20Calculator%20Docs%2044cc8157c2be4924b3900e5af32e6d6c/output.png)
+![inclusion_fee_rate.png](https://surge.sfo3.cdn.digitaloceanspaces.com/playground/btc-calculator/inclusion_fee_rate.png)
 
 $$requiredFeeRate = baseFeeRate * competitionFactor * 1.1$$
 
@@ -118,6 +118,6 @@ Daily Fee in USD : **49,228 USD**
 
 Yearly Fee in USD: **17.97M USD**
 
-![fee_graph.png](Bitcoin%20Fee%20Calculator%20Docs%2044cc8157c2be4924b3900e5af32e6d6c/fee_graph.png)
+![graph_l2_fees.png](https://surge.sfo3.cdn.digitaloceanspaces.com/playground/btc-calculator/graph_l2_fees.png)
 
 As the number of transactions increases on L2 the fee paid for each transaction reduces.
