@@ -86,31 +86,17 @@ Given:
 
 ### Step-by-Step Calculation:
 
-**Total Demand:**
+**Total Demand:** total_demand = 409600 bytes × 10 = 4096000 bytes (or 4000 KB)
 
-total_demand = 409600 bytes × 10 = 4096000 bytes (or 4000 KB)
+**Max Rollup Space:** max_rollup_space = 409600 bytes (or 400KB)
 
-**Max Rollup Space:**
+**Competition Factor:** $$competitionFactor=max(1,4096000/409600)=max(1,10)=10$$
 
-max_rollup_space = 409600 bytes (or 400KB)
+**Required Fee Rate:** $$requiredFeeRate = 3 * 10 * 1.1 = 33(satoshis-per-byte)$$
 
-**Competition Factor:**
+**Total Fee:** $$totalFee = 33 * (409600 / 4) = 3379200(satoshis)$$
 
-$$
-competitionFactor=max(1,4096000/409600)=max(1,10)=10
-$$
-
-**Required Fee Rate:**
-
-$$requiredFeeRate = 3 * 10 * 1.1 = 33(satoshis-per-byte)$$
-
-**Total Fee:**
-
-$$totalFee = 33 * (409600 / 4) = 3379200(satoshis)$$
-
-**Convert to Per Day:**
-
-$$perDayFee = 3379200 * 24 = 81100800(Satoshis-per-day)$$
+**Convert to Per Day:** $$perDayFee = 3379200 * 24 = 81100800(Satoshis-per-day)$$
 
 **Convert to Per Year:** $$perYearFee = 324403200 * 365 = 29601792000(satoshis-per-year)$$
 
