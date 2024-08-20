@@ -21,13 +21,7 @@ Formulas
 
 The total demand is the combined size of all rollup batches that need to be included in a block.
 
-$$
-totalDemand
-=
-rollupBatchSize
-×
-numRollups
-$$
+$$totalDemand = rollupBatchSize * numRollups$$
 
 ### 2. Max Rollup Space
 
