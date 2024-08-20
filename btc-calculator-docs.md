@@ -1,8 +1,6 @@
-# Bitcoin Fee Calculator Docs
+# BRIEF: Bitcoin Rollup Inscription Estimated Fee Docs
 
-## Rollup Fee Simulation Documentation
-
-### **Introduction**
+## **Introduction**
 
 This document provides a detailed explanation of how to calculate the required fee rate for including rollup batches in a blockchain, given a specific number of rollups and base fee rate. It also explains how to convert the calculated fee into daily and yearly costs.
 
