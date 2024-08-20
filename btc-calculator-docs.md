@@ -27,13 +27,7 @@ $$totalDemand = rollupBatchSize * numRollups$$
 
 This is the maximum space available for rollup batches in a block.
 
-$$
-maxRollupSpace
-=
-maxSize (KB)
-×
-1024
-$$
+$$maxRollupSpace = maxSize (KB) * 1024$$
 
 **(to convert to bytes)**
 
@@ -41,15 +35,7 @@ $$
 
 The competition factor adjusts the base fee rate based on the ratio of total demand to maximum rollup space. If the total demand exceeds the available space, the competition factor increases.
 
-# $competitionFactor
-
-max
-(
-1
-,
-totalDemand/
-maxRollupSpace
-)$
+# $competitionFactor = max(1, totalDemand / maxRollupSpace)$
 
 ### 4. Required Fee Rate
 
@@ -57,9 +43,7 @@ This is the fee rate needed per byte to ensure the inclusion of the rollup batch
 
 ![output.png](Bitcoin%20Fee%20Calculator%20Docs%2044cc8157c2be4924b3900e5af32e6d6c/output.png)
 
-$$
-requiredFeeRate=baseFeeRate×competitionFactor×1.1
-$$
+$$requiredFeeRate = baseFeeRate * competitionFactor * 1.1$$
 
 1.1x, is the multiplier factor to have 10% excess priority fees that is added to the base fee, to assure our inscription is included in the block.
 
@@ -71,18 +55,13 @@ Bitcoin transactions are measured in virtual bytes (vB). Since SegWit, 1 vB is a
 
 - 1 kB = 1,000 bytes = 250 vB (assuming average SegWit usage).
 
-$$
-totalFee=requiredFeeRate×(rollupBatchSize(in KB)/4)
-$$
+$$totalFee=requiredFeeRate * (rollupBatchSize(in KB) / 4)$$
 
 ### 6. Convert Fee to Per Day
 
 To convert the total fee to a daily fee, we multiply by the number of transactions expected per day.
 
-$$
-perDayFee=totalFee×
-frequencyPerDay
-$$
+$$perDayFee=totalFee * frequencyPerDay$$
 
 ​
 
@@ -90,15 +69,13 @@ $$
 
 The yearly fee is calculated by multiplying the daily fee by the number of days in a year (365).
 
-$$
-perYearFee=perDayFee×365
-$$
+$$perYearFee=perDayFee * 365$$
 
 ## Example Calculation
 
 Given:
 
-r**ollup_batch_size = 400 KB = 409600 bytes**
+**rollup_batch_size = 400 KB = 409600 bytes**
 
 **numRollups = 10**
 
@@ -126,52 +103,20 @@ $$
 
 **Required Fee Rate:**
 
-$$
-requiredFeeRate
-=
-3
-×
-10
-×
-1.1
-=
-33
-(satoshis-per-byte)
-$$
+$$requiredFeeRate = 3 * 10
+* 1.1 = 33(satoshis-per-byte)$$
 
 **Total Fee:**
 
-$$
-totalFee =
-33
-×
-(409600/4)
-=
-3379200(satoshis)
-$$
+$$totalFee = 33 * (409600 / 4) = 3379200(satoshis)$$
 
 **Convert to Per Day:**
 
-$$
-perDayFee
-=
-3379200
-×
-24 = 81100800(Satoshis-per-day)
-$$
+$$perDayFee = 3379200 * 24 = 81100800(Satoshis-per-day)$$
 
 **Convert to Per Year:**
 
-$$
-perYearFee
-=
-324403200
-×
-365
-=
-29601792000
- (satoshis-per-year)
-$$
+$$perYearFee = 324403200 * 365 = 29601792000(satoshis-per-year)$$
 
 ## Final Results:
 
