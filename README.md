@@ -1,6 +1,6 @@
 # BTC Playground
 
-Welcome to **BTC Playground**! This repository contains tools designed to help developers achieve their goals efficiently. Below, you'll find an overview of the tool along with a link to the detailed documentation.
+Welcome to **BTC Playground**! This repository contains tools (coming soon) designed to help developers achieve their goals efficiently. Below, you'll find an overview of the tool along with a link to the detailed documentation.
 
 ## BRIEF: Bitcoin Rollup Inscription Estimated Fee
 
