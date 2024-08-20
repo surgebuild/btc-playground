@@ -26,7 +26,6 @@ $$totalDemand = rollupBatchSize * numRollups$$
 ### 2. Max Rollup Space
 
 This is the maximum space available for rollup batches in a block.
-
 $$maxRollupSpace = maxSize (KB) * 1024$$
 
 **(to convert to bytes)**
@@ -113,9 +112,7 @@ $$totalFee = 33 * (409600 / 4) = 3379200(satoshis)$$
 
 $$perDayFee = 3379200 * 24 = 81100800(Satoshis-per-day)$$
 
-**Convert to Per Year:**
-
-$$perYearFee = 324403200 * 365 = 29601792000(satoshis-per-year)$$
+**Convert to Per Year:** $$perYearFee = 324403200 * 365 = 29601792000(satoshis-per-year)$$
 
 ## Final Results:
 
